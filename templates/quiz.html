@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='quiz.js') }}"></script> <!-- Link to the JavaScript file -->
+</head>
+<body class="bg-white font-roboto">
+    <div class="max-w-4xl mx-auto p-4">
+        <div class="text-center py-4" style="background: linear-gradient(to right, #f8caca, #ff0000);">
+            <h1 class="text-4xl font-bold text-black">Quiz</h1>
+        </div>
+        <div class="mt-8 p-4 bg-red-100 rounded-lg">
+            <p class="text-lg font-bold">Q.No: What is the Japanese word for "apple"?</p>
+            <div>
+                <input type="radio" name="question1" value="A"> りんご (ringo)<br>
+                <input type="radio" name="question1" value="B"> みかん (mikan)<br>
+                <input type="radio" name="question1" value="C"> ばなな (banana)<br>
+                <input type="radio" name="question1" value="D"> ぶどう (budou)<br>
+            </div>
+        </div>
+        <div class="mt-8 text-right">
+            <button class="px-6 py-2 bg-red-100 text-black font-bold rounded-lg" >    <a href="{{ url_for('quiz2') }}">Next</a></button>
+        </div>
+        <div id="result" class="mt-4 text-lg font-bold"></div> <!-- Result display area -->
+    </div>
+</body>
+</html>

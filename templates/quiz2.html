@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='quiz.js') }}"></script> <!-- Link to the JavaScript file -->
+</head>
+<body class="bg-white flex flex-col items-center justify-center min-h-screen">
+    <div class="w-full max-w-2xl">
+        <div class="bg-gradient-to-r from-pink-300 to-red-500 text-center py-4">
+            <h1 class="text-4xl font-bold text-black">Language Learning Quiz</h1>
+        </div>
+        <div class="bg-pink-100 p-4 mt-4 rounded-lg">
+            <p class="text-lg font-bold">Q.No: What is the Japanese word for "Hello"?</p>
+            <div>
+                <input type="radio" name="question2" value="A"> こんにちは (Konnichiwa)<br>
+                <input type="radio" name="question2" value="B"> さようなら (Sayonara)<br>
+                <input type="radio" name="question2" value="C"> ありがとう (Arigatou)<br>
+                <input type="radio" name="question2" value="D"> おはよう (Ohayou)<br>
+            </div>
+        </div>
+        <div class="flex justify-between mt-8">
+            <button class="bg-pink-100 text-black font-bold py-2 px-4 rounded-lg" onclick="window.location.href='{{ url_for('quiz') }}'">
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            
+        </div>
+        <div class="mt-8 text-right">
+            <button class="px-6 py-2 bg-red-100 text-black font-bold rounded-lg" onclick="finishQuiz()">Finish Quiz</button>
+        </div>
+        <div id="result" class="mt-4 text-lg font-bold"></div> <!-- Result display area -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-white flex flex-col items-center">
+    <div class="w-full bg-gradient-to-r from-purple-700 to-purple-300 p-4 flex justify-between items-center rounded-b-lg">
+        <h1 class="text-4xl font-bold text-black">Flaskcards</h1>
+        <i class="fas fa-user-circle text-4xl text-purple-500"></i>
+    </div>
+    <div class="flex flex-wrap justify-center mt-8 space-x-4">
+        <div class="bg-gray-300 p-6 rounded-lg text-center w-48">
+            <h2 class="text-xl font-bold">APPLE</h2>
+            <p class="text-red-500">In Japanese</p>
+            <p class="text-4xl">りんご</p>
+            <p class="text-xl">Ringo</p>
+        </div>
+        <div class="bg-gray-300 p-6 rounded-lg text-center w-48">
+            <h2 class="text-xl font-bold">BIRDS</h2>
+            <p class="text-red-500">In Japanese</p>
+            <p class="text-4xl">鳥</p>
+            <p class="text-xl">Tori</p>
+        </div>
+        <div class="bg-gray-300 p-6 rounded-lg text-center w-48">
+            <h2 class="text-xl font-bold">SCHOOL</h2>
+            <p class="text-red-500">In Japanese</p>
+            <p class="text-4xl">学校</p>
+            <p class="text-xl">Gakkō</p>
+        </div>
+    </div>
+    <button class="mt-8 bg-gray-400 text-black py-2 px-6 rounded-lg"><a href="{{ url_for('index') }}">Finish</a></button>
+</body>
+</html>

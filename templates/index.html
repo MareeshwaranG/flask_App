@@ -1,0 +1,60 @@
+<html>
+ <head>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="font-roboto">
+  <div class="min-h-screen flex flex-col items-center bg-white">
+   <!-- Header -->
+   <div class="w-full bg-gradient-to-r from-cyan-500 to-pink-500 p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-black">
+     Language Learning App (Japanese)
+    </h1><a href="{{ url_for('login') }}">
+    <i class="fas fa-user-circle text-3xl text-white">
+    </i></a>
+   </div>
+   <!-- Welcome Message -->
+   <div class="mt-4 text-center">
+    <p class="text-lg">
+     welcome {{username}}
+    </p>
+   </div>
+   <!-- Home Icon -->
+   <div class="mt-2">
+    <i class="fas fa-home text-2xl">
+    </i>
+    <span class="text-xl font-bold">
+     HOME
+    </span>
+   </div>
+   <!-- Main Content -->
+   <div class="mt-8 text-center">
+    <h2 class="text-2xl font-bold">
+     Start Your Learning Today........
+    </h2>
+   </div>
+   <!-- Options -->
+   <div class="mt-8 flex justify-center space-x-8">
+    <!-- Quiz Option -->
+    <div class="flex flex-col items-center">
+     <div class="w-40 h-40 bg-gradient-to-r from-green-200 to-green-400 rounded-lg border-2 border-red-500 flex items-center justify-center">
+      <img alt="Quiz icon with a question mark inside a speech bubble" height="100" src="https://storage.googleapis.com/a1aa/image/kIe7wnZIK-Of_5keZ5wr7dL55Wx85SnTj_nsjJWf7XU.jpg" width="100"/>
+     </div>
+     <p class="mt-2 text-xl font-bold">
+        <a href="{{ url_for('quiz') }}">Quiz</a>
+     </p>
+    </div>
+    <!-- Flashcards Option -->
+    <div class="flex flex-col items-center">
+     <div class="w-40 h-40 bg-gradient-to-r from-blue-200 to-blue-400 rounded-lg border-2 border-yellow-500 flex items-center justify-center">
+      <img alt="Flashcards icon with a stack of cards" height="100" src="https://storage.googleapis.com/a1aa/image/asoP3FDG8-fHYuhfNbgFqwi4uSOrDycWhQ1uQw89fKA.jpg" width="100"/>
+     </div>
+     <p class="mt-2 text-xl font-bold"><a href="{{ url_for('flashcard') }}">Flashcards</a>
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
